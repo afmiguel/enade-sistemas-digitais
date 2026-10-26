@@ -1057,22 +1057,22 @@
             Como a porta final é uma <strong>XNOR (coincidência)</strong>, a saída \(Y\) será <strong>1</strong> se, e somente se, as duas entradas forem <strong>iguais</strong>:
           </p>
           <div class="callout-calc">
-            $$Y = 1 \iff G_4 = G_5 \quad (	ext{ambas } 0 	ext{ ou ambas } 1)$$
+            $$Y = 1 \iff G_4 = G_5 \quad (\text{ambas } 0 \text{ ou ambas } 1)$$
           </div>
 
           <div class="resolucao-passo-title">🔹 Passo 3: Teste das Combinações da Alternativa C</div>
           <div class="callout-calc">
             <p><strong>1. Para 0111 (\(A=0, B=1, C=1, D=1\)):</strong></p>
             $$G_1 = 0 \cdot 1 = 0; \quad G_2 = \overline{1 \cdot 1 \cdot 1} = 0; \quad G_3 = 0+1+1 = 1$$
-            $$G_4 = 0 \oplus 0 = 0; \quad G_5 = \overline{0 + 1} = 0 \implies G_4 = G_5 = 0 \implies Y = \mathbf{1} \quad 	ext{(Aprovado)}$$
+            $$G_4 = 0 \oplus 0 = 0; \quad G_5 = \overline{0 + 1} = 0 \implies G_4 = G_5 = 0 \implies Y = \mathbf{1} \quad \text{(Aprovado)}$$
 
             <p style="margin-top:8px;"><strong>2. Para 1001 (\(A=1, B=0, C=0, D=1\)):</strong></p>
             $$G_1 = 1 \cdot 1 = 1; \quad G_2 = \overline{0 \cdot 0 \cdot 1} = 1; \quad G_3 = 1+0+0 = 1$$
-            $$G_4 = 1 \oplus 1 = 0; \quad G_5 = \overline{1 + 1} = 0 \implies G_4 = G_5 = 0 \implies Y = \mathbf{1} \quad 	ext{(Aprovado)}$$
+            $$G_4 = 1 \oplus 1 = 0; \quad G_5 = \overline{1 + 1} = 0 \implies G_4 = G_5 = 0 \implies Y = \mathbf{1} \quad \text{(Aprovado)}$$
 
             <p style="margin-top:8px;"><strong>3. Para 1011 (\(A=1, B=0, C=1, D=1\)):</strong></p>
             $$G_1 = 1 \cdot 1 = 1; \quad G_2 = \overline{0 \cdot 1 \cdot 1} = 1; \quad G_3 = 1+0+1 = 1$$
-            $$G_4 = 1 \oplus 1 = 0; \quad G_5 = \overline{1 + 1} = 0 \implies G_4 = G_5 = 0 \implies Y = \mathbf{1} \quad 	ext{(Aprovado)}$$
+            $$G_4 = 1 \oplus 1 = 0; \quad G_5 = \overline{1 + 1} = 0 \implies G_4 = G_5 = 0 \implies Y = \mathbf{1} \quad \text{(Aprovado)}$$
           </div>
 
           <div class="distratores-box">
@@ -1788,7 +1788,7 @@ A=1:     d    0    0    1   --> Linha A=1 tem 'd' em 100 e '1' em 110 (m6)
         <div class="resolucao-bloco">
           <div class="resolucao-passo-title">🔹 Passo 1: Dedução dos 3 Termos do Mapa de Karnaugh</div>
           <ol style="margin-left: 20px; font-size: 0.94rem;">
-            <li><strong>Laço de 8 células (colunas de extremidade 00 e 10):</strong> Todas as linhas variam; nas colunas \(C\) varia (\(0 	o 1\)) e \(D = 0\) permanece constante \(\implies \mathbf{\overline{D}}\).</li>
+            <li><strong>Laço de 8 células (colunas de extremidade 00 e 10):</strong> Todas as linhas variam; nas colunas \(C\) varia (\(0 \to 1\)) e \(D = 0\) permanece constante \(\implies \mathbf{\overline{D}}\).</li>
             <li><strong>Laço de 4 células (quadrado central-esquerdo):</strong> Linhas \(AB = 01, 11\) (\(B=1\)); colunas \(CD = 00, 01\) (\(C=0\)) \(\implies \mathbf{B\overline{C}}\).</li>
             <li><strong>Laço de 2 células (linha 10, colunas 11 e 10):</strong> Linha \(AB = 10\) (\(A\overline{B}\)); colunas \(CD = 11, 10\) (\(C=1\)) \(\implies \mathbf{A\overline{B}C}\).</li>
           </ol>
@@ -1976,7 +1976,7 @@ A=1:     d    0    0    1   --> Linha A=1 tem 'd' em 100 e '1' em 110 (m6)
             <li>Pelo esquemático, a porta <code>IC1C</code> (74AC11N) é responsável por acionar o LED2 (pino 8). Suas entradas devem ser \(S_1\) (pino 9), \(\overline{S_0}\) (pino 10) e a linha de controle <code>ENTRADA</code> (pino 11).</li>
             <li>Na tabela de ensaio, para \(S_1 S_0 = 10\) (decimal 2) e com <strong><code>ENTRADA = 0</code></strong>, o <strong>LED2 acendeu</strong>! Isso é impossível se o pino 11 estiver conectado à ENTRADA, pois qualquer entrada em 0 em uma porta AND força sua saída para 0.</li>
             <li>Se o pino 11 foi soldado por engano na linha de seleção \(S_1\), para a combinação \(S_1 S_0 = 10\):
-              <br>\(	ext{Pino 9} = S_1 = 1\); \(	ext{Pino 10} = \overline{S_0} = \overline{0} = 1\); e \(	ext{Pino 11} = S_1 = 1\).
+              <br>\(\text{Pino 9} = S_1 = 1\); \(\text{Pino 10} = \overline{S_0} = \overline{0} = 1\); e \(\text{Pino 11} = S_1 = 1\).
               <br>A porta recebe três níveis lógicos 1, ativando sua saída e acendendo o LED2 independentemente da linha de dados!</li>
             <li>Para qualquer outro canal (\(S_1 S_0 = 00, 01, 11\)), o produto \(S_1 \cdot \overline{S_0}\) vale 0, mantendo o LED2 apagado normalmente. Portanto, o diagnóstico é inequívoco: o pino 11 foi ligado em \(S_1\).</li>
           </ol>
@@ -2127,7 +2127,7 @@ A=1:     d    0    0    1   --> Linha A=1 tem 'd' em 100 e '1' em 110 (m6)
 
           <div class="resolucao-passo-title">🔹 Passo 2: Otimização do Tempo de Resposta</div>
           <p style="font-size:0.94rem;">
-            No circuito original não simplificado, o caminho crítico passava por 3 estágios (\(CD 	o 	ext{AND (2 ns)} 	o 	ext{NOT (1 ns)} 	o 	ext{OR (3 ns)} 	o 	ext{AND 3 entradas (4 ns)} = 10	ext{ ns}\)).
+            No circuito original não simplificado, o caminho crítico passava por 3 estágios (\(CD \to \text{AND (2 ns)} \to \text{NOT (1 ns)} \to \text{OR (3 ns)} \to \text{AND 3 entradas (4 ns)} = 10\text{ ns}\)).
           </p>
           <p style="font-size:0.94rem;">
             Contudo, o enunciado pergunta: <em>"qual o <strong>menor tempo de resposta possível</strong> considerando a possibilidade de simplificação?"</em>.
@@ -2136,7 +2136,7 @@ A=1:     d    0    0    1   --> Linha A=1 tem 'd' em 100 e '1' em 110 (m6)
             Como \(Y = A \cdot B \cdot C\), basta utilizar <strong>uma única porta AND de 3 entradas</strong>. Consultando a tabela técnica fornecida na questão:
           </p>
           <div class="callout-calc">
-            $$	ext{Atraso de porta AND de 3 entradas} = \mathbf{4	ext{ ns}}$$
+            $$\text{Atraso de porta AND de 3 entradas} = \mathbf{4\text{ ns}}$$
           </div>
         </div>
               </div>
@@ -3341,7 +3341,7 @@ A=1:     d    0    0    1   --> Linha A=1 tem 'd' em 100 e '1' em 110 (m6)
             Um sistema de aquisição de temperatura de uma chocadeira eletrônica de ovos é composto por um <strong>sensor de temperatura</strong>, um <strong>conversor analógico-digital (A/D)</strong> e um <strong>microcontrolador</strong>.
           </p>
           <p>
-            O sensor de temperatura possui, em sua saída, variação perfeitamente linear de <strong>\(1	ext{ mV/}^\circ	ext{C}\)</strong>, e o conversor A/D possui faixa de tensão de entrada de <strong>\(-5	ext{ V}\) a \(+5	ext{ V}\)</strong>. Para a chocagem de ovos de uma espécie rara de pássaro, a temperatura da chocadeira deve variar entre \(35^\circ	ext{C}\) e \(39^\circ	ext{C}\), com <strong>elevação de \(0,5^\circ	ext{C}\)</strong> a cada três dias. A figura a seguir ilustra um circuito eletrônico com amplificador operacional para monitoramento da temperatura, no qual o sensor foi conectado à sua entrada, e o conversor analógico-digital, à sua saída.
+            O sensor de temperatura possui, em sua saída, variação perfeitamente linear de <strong>\(1\text{ mV/}^\circ\text{C}\)</strong>, e o conversor A/D possui faixa de tensão de entrada de <strong>\(-5\text{ V}\) a \(+5\text{ V}\)</strong>. Para a chocagem de ovos de uma espécie rara de pássaro, a temperatura da chocadeira deve variar entre \(35^\circ\text{C}\) e \(39^\circ\text{C}\), com <strong>elevação de \(0,5^\circ\text{C}\)</strong> a cada três dias. A figura a seguir ilustra um circuito eletrônico com amplificador operacional para monitoramento da temperatura, no qual o sensor foi conectado à sua entrada, e o conversor analógico-digital, à sua saída.
           </p>
         </div>
 
@@ -3388,22 +3388,22 @@ A=1:     d    0    0    1   --> Linha A=1 tem 'd' em 100 e '1' em 110 (m6)
           <div class="resolucao-passo-title">🔹 Demonstração Matemática Passo a Passo</div>
           <div class="callout-calc">
             <p><strong>1. Variação mínima na saída do sensor (\(\Delta V_{sensor}\)):</strong></p>
-            $$\Delta V_{sensor} = 1	ext{ mV/}^\circ	ext{C} 	imes 0,5^\circ	ext{C} = 0,5	ext{ mV} = 0,5 	imes 10^{-3}	ext{ V}$$
+            $$\Delta V_{sensor} = 1\text{ mV/}^\circ\text{C} \times 0,5^\circ\text{C} = 0,5\text{ mV} = 0,5 \times 10^{-3}\text{ V}$$
 
             <p style="margin-top:6px;"><strong>2. Módulo do ganho do AmpOp inversor (\(|G|\)):</strong></p>
-            $$|G| = rac{R_f}{R_{in}} = rac{100	ext{ k}\Omega}{1	ext{ k}\Omega} = 100$$
+            $$|G| = \frac{R_f}{R_{in}} = \frac{100\text{ k}\Omega}{1\text{ k}\Omega} = 100$$
 
             <p style="margin-top:6px;"><strong>3. Variação de tensão aplicada à entrada do conversor A/D (\(\Delta V_{in, ADC}\)):</strong></p>
-            $$\Delta V_{in, ADC} = |G| 	imes \Delta V_{sensor} = 100 	imes 0,5	ext{ mV} = 50	ext{ mV} = 0,05	ext{ V}$$
+            $$\Delta V_{in, ADC} = |G| \times \Delta V_{sensor} = 100 \times 0,5\text{ mV} = 50\text{ mV} = 0,05\text{ V}$$
 
             <p style="margin-top:6px;"><strong>4. Faixa de fundo de escala (Full Scale) do conversor A/D (\(V_{FS}\)):</strong></p>
-            $$V_{FS} = (+5	ext{ V}) - (-5	ext{ V}) = 10	ext{ V}$$
+            $$V_{FS} = (+5\text{ V}) - (-5\text{ V}) = 10\text{ V}$$
 
             <p style="margin-top:6px;"><strong>5. Cálculo do número de bits (\(n\)):</strong></p>
             <p>O degrau de quantização (tensão do bit menos significativo - LSB) deve ser no máximo igual a \(\Delta V_{in, ADC}\):</p>
-            $$	ext{LSB} = rac{V_{FS}}{2^n} \le 0,05	ext{ V} \implies rac{10}{2^n} \le 0,05 \implies 2^n \ge rac{10}{0,05} = 200$$
+            $$\text{LSB} = \frac{V_{FS}}{2^n} \le 0,05\text{ V} \implies \frac{10}{2^n} \le 0,05 \implies 2^n \ge \frac{10}{0,05} = 200$$
             <p>Avaliando as potências de 2:</p>
-            $$2^7 = 128 < 200 \quad 	ext{e} \quad 2^8 = 256 \ge 200$$
+            $$2^7 = 128 < 200 \quad \text{e} \quad 2^8 = 256 \ge 200$$
             <p>Logo, o conversor precisa de no mínimo <strong>8 bits</strong>.</p>
           </div>
         </div>
